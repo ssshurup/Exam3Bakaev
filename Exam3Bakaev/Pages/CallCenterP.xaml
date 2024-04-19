@@ -1,0 +1,34 @@
+﻿<Page x:Class="Exam3Bakaev.Pages.CallCenterP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Exam3Bakaev.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CallCenterP" Background="White">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="600"/>
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <StackPanel>
+                    <Button x:Name="CreateZBT" Content="Add zayavka" Margin="5" />
+                    <Button x:Name="DeleteZBT" Content="Delete zayavka" Margin="5" />
+                </StackPanel>
+                <StackPanel VerticalAlignment="Bottom">
+                    <Button x:Name="BackBT" Content="Back" Margin="5" Click="BackBT_Click"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1">
+                <DataGrid x:Name="ZayavkiDG" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Date" Binding="{Binding dateZ}" Width="300"/>
+                        <DataGridTextColumn Header="Address" Binding="{Binding dateZ}" Width="300"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Grid>
+</Page>
